@@ -3,10 +3,7 @@ package es.dam.repositories;
 import es.dam.errors.PersonaException;
 import es.dam.models.Persona;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Assumptions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 
 import java.util.UUID;
@@ -22,6 +19,12 @@ class PersonasRespositoryImplTest {
 
 
 
+
+
+    @BeforeEach
+    void setUp() {
+        repository.delete(p.getId());
+    }
 
     @Test
     void getAll() {
@@ -46,8 +49,7 @@ class PersonasRespositoryImplTest {
                 ()-> assertEquals(result1.get().getId(),p.getId() )
         );
 
-        //para limpiar repositorio
-        repository.delete(p);
+
     }
 
     @Test
@@ -74,8 +76,7 @@ class PersonasRespositoryImplTest {
                 ()-> assertEquals(result1.get() ,p )
         );
 
-        //para limpiar repositorio
-        repository.delete(p);
+
     }
 
     @Test
@@ -101,8 +102,7 @@ class PersonasRespositoryImplTest {
                 ()-> assertEquals(result1.get().getNombre(),nuevoNombre)
         );
 
-        //para limpiar repositorio
-        repository.delete(p);
+
     }
 
     @Test
@@ -147,7 +147,7 @@ class PersonasRespositoryImplTest {
                 ()-> assertEquals(result1.getMessage(), "Persona no encontrada con id: " + persona.getId() )
 
         );
-        //para limpiar repositorio
+
 
 
     }

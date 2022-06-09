@@ -36,11 +36,13 @@ public class PersonasController {
         return personasRepository.save(persona);
     }
 
+    //todo a testear
     public Persona updatePersona(Persona persona) throws PersonaException {
         checkData(persona);
         return personasRepository.update(persona);
     }
 
+    //todo a testear
     public void deletePersona(Persona persona) throws PersonaException {
         if (persona != null) {
             personasRepository.delete(persona);
@@ -71,6 +73,7 @@ public class PersonasController {
         return personasStorage.restore();
     }
 
+    //todo a testear
     public void backupData(List<Persona> personas) {
         personasStorage.backup(personas);
     }

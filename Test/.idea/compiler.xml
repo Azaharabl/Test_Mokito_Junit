@@ -33,6 +33,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/kotlinx-metadata-jvm/0.3.0/kotlinx-metadata-jvm-0.3.0.jar" />
         </processorPath>
         <module name="ed-examen-06" />
+        <module name="Test" />
         <module name="ed-examen-06-1ord-2021-2022-Azaharabl" />
       </profile>
     </annotationProcessing>
